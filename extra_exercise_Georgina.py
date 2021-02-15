@@ -20,7 +20,7 @@ if re.search('^[ACGTU]+$', args.seq):
       cs = args.seq.count("C")
       gs = args.seq.count("G")
       a = args.seq.count("A")
-      counter= sum(ts, cs, gs, a)
+      counter= (ts+cs+gs+a)
       percT=ts/counter
       percC=cs/counter
       percG=gs/counter
@@ -35,7 +35,7 @@ if re.search('^[ACGTU]+$', args.seq):
       cs = args.seq.count("C")
       gs = args.seq.count("G")
       a = args.seq.count("A")
-      counter=sum(us, cs, gs, a)
+      counter=(us+cs+gs+a)
       percU=us/counter
       percC=cs/counter
       percG=gs/counter

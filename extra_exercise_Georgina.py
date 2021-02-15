@@ -25,10 +25,10 @@ if re.search('^[ACGTU]+$', args.seq):
       percC=cs/counter
       percG=gs/counter
       percA=ass/counter
-      print ("% of Ts: " percT)
-      print ("% of Cs: " percC)
-      print ("% of Gs: " percG)
-      print ("% of As: " percA)
+      print ("% of Ts: ", percT)
+      print ("% of Cs: ", percC)
+      print ("% of Gs: ", percG)
+      print ("% of As: ", percA)
 
    if re.search('U', args.seq) and not re.search('T', args.seq):
       us = args.seq.count("U")
@@ -40,8 +40,8 @@ if re.search('^[ACGTU]+$', args.seq):
       percC=cs/counter
       percG=gs/counter
       percA=ass/counter
-      print ("% of Us: " percU)
-      print ("% of Cs: " percC)
-      print ("% of Gs: " percG)
-      print ("% of As: " percA)
+      print ("% of Us: ", percU)
+      print ("% of Cs: ", percC)
+      print ("% of Gs: ", percG)
+      print ("% of As: ", percA)
 

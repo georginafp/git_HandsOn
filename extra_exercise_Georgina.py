@@ -19,12 +19,12 @@ if re.search('^[ACGTU]+$', args.seq):
       ts = args.seq.count("T")
       cs = args.seq.count("C")
       gs = args.seq.count("G")
-      ass = args.seq.count("A")
-      counter= sum(ts, cs, gs, aas)
+      a = args.seq.count("A")
+      counter= sum(ts, cs, gs, a)
       percT=ts/counter
       percC=cs/counter
       percG=gs/counter
-      percA=ass/counter
+      percA=a/counter
       print ("% of Ts: ", percT)
       print ("% of Cs: ", percC)
       print ("% of Gs: ", percG)
@@ -34,12 +34,12 @@ if re.search('^[ACGTU]+$', args.seq):
       us = args.seq.count("U")
       cs = args.seq.count("C")
       gs = args.seq.count("G")
-      ass = args.seq.count("A")
-      counter=sum(us, cs, gs, ass)
+      a = args.seq.count("A")
+      counter=sum(us, cs, gs, a)
       percU=us/counter
       percC=cs/counter
       percG=gs/counter
-      percA=ass/counter
+      percA=a/counter
       print ("% of Us: ", percU)
       print ("% of Cs: ", percC)
       print ("% of Gs: ", percG)

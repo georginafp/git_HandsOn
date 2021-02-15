@@ -22,11 +22,10 @@ args.seq = args.seq.upper()                 # Note we just added this line
 if re.search('^[ACGTU]+$', args.seq):
     if re.search('T', args.seq):
         print ('The sequence is DNA')
+	if re.search('TU', args.seq):
+           print ("Not valid sequence")
     elif re.search('U', args.seq):
         print ('The sequence is RNA')
-    else re.search('TU',"UT", args.seq):
-        print ('The sequence is not DNA nor RNA')
-
     else:
         print ('The sequence can be DNA or RNA')
 else:

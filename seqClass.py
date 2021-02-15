@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
-
+import sys, re
+from argparse import ArgumentParser
 
 parser = ArgumentParser(description = 'Classify a sequence as DNA or RNA')
 parser.add_argument("-s", "--seq", type = str, required = True, help = "Input sequence")
+
 parser.add_argument("-m", "--motif", type = str, required = False, help = "Motif")
 
 
@@ -23,8 +25,7 @@ if re.search('^[ACGTU]+$', args.seq):
     else:
         print ('The sequence can be DNA or RNA')
 else:
-    print ('None of the above')
-
+    print ('The sequence is not DNA nor RNA')
 
 
 if args.motif:
@@ -34,3 +35,5 @@ if args.motif:
     print("FOUND")
   else:
     print("NOT FOUND")
+
+

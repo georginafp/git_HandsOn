@@ -19,7 +19,11 @@ args = parser.parse_args()
 
 # for classifying both, RNA and DNA sequences given as inputs
 args.seq = args.seq.upper()                 # Note we just added this line
+
 if re.search('^[ACGTU]+$', args.seq):
+# as you can see I added an extra code which says that for being  a DNA
+# needs to be a T and never a U 
+# while for being an RNA sequence needs to be a U and never a T
     if re.search('T', args.seq) and not re.search('U', args.seq):
         print ('The sequence is DNA')
     elif re.search('U', args.seq) and not re.search ('T', args.seq):
